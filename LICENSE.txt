@@ -1,0 +1,21 @@
+2D Drawing Plotter — 利用条件案 / Proposed Application Terms
+対象: 0.12.0-dev.38以降の本体独自部分。公開前の権利確認・最終承認が必要です。
+
+1. 無償利用
+本体独自部分について、個人・社内・商用業務での無償利用を認めます。
+2. 再配布
+本条件・第三者通知を保持し、同一版の必要な対応ソースを同等の条件で提供する場合、改変のない配布ZIPの無償再配布を認めます。公式配布元と誤認させないでください。
+3. 本体の変更と調査
+本体独自部分の改変版の公開・再配布には、権利者の別途許諾を要します。私的な互換性・セキュリティの調査を目的とする解析は認めます。法令で認められる行為を制限しません。
+4. 第三者コンポーネント
+第三者OSS・フォントには各々の原ライセンスが優先して適用されます。本条件はGPL等が認めるソース取得、複製、改変、再配布の権利を制限しません。第三者通知を参照してください。
+同梱PythonのMicrosoft Distributable Codeについては、runtime/LICENSE.txtの追加条件を保持し、そのcopyright等の変更、Microsoft公式との誤認を招く使用、Microsoftプラットフォーム外向け配布、悪意・欺瞞・違法なプログラムへの組込みを禁止します。これらの制限は当該Microsoftコードに限ります。
+5. 無保証・責任
+現状のまま提供し、図面再現性、尺度、検索、特定用途への適合性を保証しません。重要な成果物は利用者が原図等と照合してください。法令で許される範囲で損害に対する責任を制限します。故意・重大な過失や強行法規により制限できない責任は除きます。
+6. サポート
+修正・更新・個別対応・応答時間・SLAを保証しません。
+7. 適用の範囲
+過去にMIT条件で提供した版の許諾を取り消しません。自作部分の権利帰属とGPL適用範囲は公開前の確認事項です。
+
+English summary (Japanese text is primary)
+These proposed terms cover only application-authored parts in dev.38 and later, subject to release approval. Free personal, internal and business use is permitted. Unmodified release ZIPs may be redistributed free of charge with these terms, third-party notices and required matching source on equivalent terms. Publication of modified application parts requires separate permission. Private compatibility/security analysis and statutory rights are not restricted. Third-party licenses govern their respective components and are not limited by these terms. The application is supplied as-is, with liability limited only to the extent permitted by law, excluding liability that cannot lawfully be excluded. No support, updates or SLA are promised. Prior MIT grants are not revoked.
