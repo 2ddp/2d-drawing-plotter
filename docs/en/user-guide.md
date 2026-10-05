@@ -1,10 +1,10 @@
 # User guide
 
-2D Drawing Plotter 0.12.0-dev.39 is a local Windows 11 x64 application for viewing 2D DWG drawings and exporting PDF. It does not edit drawings. Japanese is the primary language; English documentation is available, but the UI currently remains Japanese.
+2D Drawing Plotter 0.1.0 is a local Windows 11 x64 application for viewing 2D DWG drawings and exporting PDF. It does not edit drawings. Japanese is the primary language; English documentation is available, but the UI currently remains Japanese.
 
 ## Start
 
-Extract the complete Windows ZIP into a writable folder and double-click START.cmd. Python 3.13.16 x64 and application bytecode are bundled; no separate Python setup is needed. Keep the console open while using the app and close the tab and console to exit. Do not replace runtime with an older release. Administrator permission, Git, Node.js and pip are unnecessary. Windows physical offline/communication acceptance is pending.
+Extract the complete Windows ZIP into a writable folder and double-click START.cmd. Python 3.13.16 x64 and application bytecode are bundled; no separate Python setup is needed. Keep the console open while using the app and close the tab and console to exit. Do not replace runtime with an older release. Administrator permission, Git, Node.js and pip are unnecessary.
 
 ## Open and navigate
 

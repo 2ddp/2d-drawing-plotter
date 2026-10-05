@@ -1,5 +1,5 @@
-2D Drawing Plotter — 利用条件案 / Proposed Application Terms
-対象: 0.12.0-dev.38以降の本体独自部分。公開前の権利確認・最終承認が必要です。
+2D Drawing Plotter — 利用条件 / Application Terms
+対象: 2D Drawing Plotter 0.1.0以降の本体独自部分。第三者コンポーネントには各々のライセンスが適用されます。
 
 1. 無償利用
 本体独自部分について、個人・社内・商用業務での無償利用を認めます。
@@ -15,7 +15,7 @@
 6. サポート
 修正・更新・個別対応・応答時間・SLAを保証しません。
 7. 適用の範囲
-過去にMIT条件で提供した版の許諾を取り消しません。自作部分の権利帰属とGPL適用範囲は公開前の確認事項です。
+過去にMIT条件で提供した版の許諾を取り消しません。
 
 English summary (Japanese text is primary)
-These proposed terms cover only application-authored parts in dev.38 and later, subject to release approval. Free personal, internal and business use is permitted. Unmodified release ZIPs may be redistributed free of charge with these terms, third-party notices and required matching source on equivalent terms. Publication of modified application parts requires separate permission. Private compatibility/security analysis and statutory rights are not restricted. Third-party licenses govern their respective components and are not limited by these terms. The application is supplied as-is, with liability limited only to the extent permitted by law, excluding liability that cannot lawfully be excluded. No support, updates or SLA are promised. Prior MIT grants are not revoked.
+These terms cover application-authored parts in 2D Drawing Plotter 0.1.0 and later. Third-party components retain their respective licenses. Free personal, internal and business use is permitted. Unmodified release ZIPs may be redistributed free of charge with these terms, third-party notices and required matching source on equivalent terms. Publication of modified application parts requires separate permission. Private compatibility/security analysis and statutory rights are not restricted. Third-party licenses govern their respective components and are not limited by these terms. The application is supplied as-is, with liability limited only to the extent permitted by law, excluding liability that cannot lawfully be excluded. No support, updates or SLA are promised. Prior MIT grants are not revoked.

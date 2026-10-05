@@ -2,20 +2,38 @@
 
 **Lightweight DWG Viewer & PDF Plot Tool**
 
-An independently developed Windows tool for viewing 2D DWG drawings and exporting PDF. Japanese is the primary language. No drawing editing or DWG saving is provided.
+A Windows tool for viewing 2D DWG drawings and creating PDF output locally. [日本語](../../README.md)
 
 ## Download
 
-Get `2D-Drawing-Plotter-0.12.0-dev.39-Windows-x64.zip` from [Releases](https://github.com/2ddp/2d-drawing-plotter/releases). Extract the complete ZIP into a writable folder and run `START.cmd`. Keep its console open while using the app. Python 3.13.16 x64 and the parser are bundled; no separate Python installation or first-run download is required by the application.
+[Download the latest release](https://github.com/2ddp/2d-drawing-plotter/releases/latest)
 
-This is a development prerelease for Windows 11 x64. Clean Windows offline/process-monitoring acceptance and representative DWG regression checks remain pending. Verify important PDF output against the original drawing. See [validation](validation.md) and [known limitations](known-limitations.md).
+Extract `2D-Drawing-Plotter-0.1.0-Windows-x64.zip` and run `START.cmd`.
 
-## Local processing
+Requires Windows 11 x64 and desktop Edge, Chrome or Firefox. No installation, administrator privileges or separate Python installation are required. Normal use works offline. Free for personal, internal and commercial use. Keep the console open while using the application; close the browser tab and console to exit.
 
-Drawings are parsed and rendered locally. No drawing cloud-upload feature, user account, advertising, analytics/telemetry or automatic update check is implemented. Runtime assets and fonts are bundled. Browser and server communicate on 127.0.0.1; browser/OS independent networking is outside application control.
+## Features
 
-## Licenses and reports
+- 2D DWG display, Model / Layout views and layer visibility / print controls
+- Zoom, pan, fit, selection and a snapping rectangular plot window
+- Paper, orientation, scale, margins, CTB and per-color plot settings
+- User-loaded SHX fonts, vector PDF and searchable text
+- Export / import plot settings and save parsed drawing JSON
 
-Maintained application source is not published. Executable browser JavaScript remains inspectable; Python bytecode is not encryption. Each Release provides the matching `LibreDWG-source-for-2D-Drawing-Plotter-0.12.0-dev.39.zip` alongside the runtime with equivalent access and no extra charge. Preserve this matching source provision when redistributing. Private development backups are not public release assets. GPL scope, ownership and complete attribution reviews remain open; no final legal clearance is claimed.
+[User guide](user-guide.md) · [Supported formats](supported-dwg.md)
 
-For normal bugs and feature requests, use [Issues](https://github.com/2ddp/2d-drawing-plotter/issues) with version, environment and reproduction steps. Do not post confidential drawings or personal information. Support is best effort with no SLA. See the bilingual root [Terms](../../LICENSE.txt), [Notices](../../THIRD_PARTY_NOTICES.md), [Privacy](../../PRIVACY.md), [Security](../../SECURITY.md) and [Reporting policy](../../CONTRIBUTING.md).
+## Privacy
+
+Drawings are processed on your PC and are not uploaded to external servers. No account, ads, tracking or telemetry. Programs and fallback fonts required for normal use are bundled.
+
+[Privacy](../../PRIVACY.md) · [Network and storage](privacy-and-network.md)
+
+## Licensing
+
+The application is free to use; maintained application source is not published. Third-party components retain their respective licenses. Matching GNU LibreDWG source and build information accompany each release as `LibreDWG-source-for-2D-Drawing-Plotter-0.1.0.zip`. ZIP hashes are in `SHA256SUMS.txt`.
+
+[Terms](../../LICENSE.txt) · [Third-party notices](../../THIRD_PARTY_NOTICES.md) · [Distribution files](distribution.md)
+
+## Reports
+
+Use [Issues](https://github.com/2ddp/2d-drawing-plotter/issues) for bugs and requests. Include the version, environment and reproduction steps; do not post confidential drawings or personal information.

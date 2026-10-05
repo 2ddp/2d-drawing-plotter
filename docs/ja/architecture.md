@@ -1,17 +1,7 @@
-# 構成と解析境界
+# アプリケーション構成
 
-DWGは独立したGNU LibreDWG CLIで解析し、CLIが通常出力するfull JSONをファイル経由で受け取ります。2D Drawing Plotter専用のDrawingDocumentを解析器へ持たせません。LibreDWGは直接リンクしません。
+DWGの解析は別プロセスのGNU LibreDWGで行います。解析結果を本体の図面モデルへ変換し、画面表示とPDF出力に利用します。DWGをDXFへ変換する処理はありません。
 
-## CLI単体の利用
+図面・画層・文字・印刷設定はPC内で扱います。ブラウザーはローカルサーバーへ接続し、描画と操作画面を表示します。
 
-`bin/win64/dwgread.exe --version`
-
-`bin/win64/dwgread.exe -O JSON -o parsed.json input.dwg`
-
-CLIは本体・ブラウザを起動せず利用できます。バージョンは0.13.4です。Unicode JSON出力だけを修正し、描画・画層管理・PDFのロジックは加えていません。
-
-## JSONと本体
-
-入力JSONはLibreDWGの公開するバージョン依存の出力形式であり、標準化された共通CAD交換仕様と同義ではありません。作成者識別とOBJECTS等を検証し、AdapterだけがLibreDWG固有の構造を解釈します。独自DrawingDocumentから共通Sceneを作り、ViewerとPDFが同じSceneを使います。DXFへ変換しません。
-
-プロセス分離は技術上の境界です。GPLの適用範囲の最終的な法的評価を保証するものではありません。
+同梱GNU LibreDWGのバージョン・変更内容・対応ソース・ビルド情報は、[第三者通知](../../THIRD_PARTY_NOTICES.md)とリリースに添付する対応ソースZIPで提供しています。

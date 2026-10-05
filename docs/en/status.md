@@ -1,31 +1,3 @@
-# Features, limits and changes
+# Features
 
-## dev.39 changes
-
-Separated executable runtime, corresponding LibreDWG source and private development backup; bundled Python, added allowlist staging, SHA-256, public documentation, network restrictions and release gates. Drawing/PDF algorithms are retained. Windows and legal acceptance are pending.
-
-## Coverage
-
-| Area | Current coverage and limits |
-|---|---|
-| DWG | LibreDWG 0.13.4 full JSON adapted to an owned model; no DXF intermediate |
-| Geometry | Lines, circles/arcs, ellipses, 2D polylines, widths/bulges, splines, solids and points |
-| Blocks/attributes | Nested transforms, basic INSERT and ATTDEF/ATTRIB; no additional XREF file loading |
-| Hatch/leader | Basic boundaries, solid/continuous-line patterns and primary leader styles; special features diagnosed |
-| Dimensions | Stored graphics block; no dimension regeneration |
-| Layout/viewports | Rectangular top views and basic freeze; nonrectangular/perspective/detail overrides limited |
-| Text | TEXT, basic MTEXT formatting/alignment/stacks, horizontal SHX and fallback TrueType |
-| Layers/navigation | Independent display/print checks, selected-layer highlight, viewport selection, pan/zoom |
-| Snaps | Basic endpoint/midpoint/center/quadrant and rectangular viewport frame; not universal CAD snap compatibility |
-| Plot/PDF | Paper, orientation, margins, scale, display/window extents, CTB pens, SHX search and font subsets |
-| Persistence | Explicit settings v3 export, old settings import and model JSON; no DWG editing/saving |
-
-Complex linetypes, transparency, per-viewport overrides, detailed typography, nonrectangular viewports, dimension regeneration, special hatches, nonzero thickness and proxies are not fully compatible. Accepted DWG generations do not guarantee correct handling of every drawing. Unsupported features and substitutions are diagnosed.
-
-Annotations use read-only/locked flags, subject to PDF-reader behavior. Search/visible-text clipping boundaries can differ. Export stops when scene limits are reached rather than producing a partial PDF.
-
-## Priorities
-
-CAD rendering compatibility is prioritized. Heavy-drawing responsiveness is accepted when it matches or exceeds the earlier trial on the same PC, drawing, view, layers, fonts and display size. Missing graphics must not be mistaken for performance gains. This hardware comparison is not yet performed.
-
-Settings-change latency and loading/PDF-generation UI pauses remain lower priority. Future page-detail candidates include origin/X-Y offsets, centering toggle and 180-degree rotation. These candidates are not implemented.
+See [supported formats](supported-dwg.md), [coverage details](known-limitations.md) and the [user guide](user-guide.md).

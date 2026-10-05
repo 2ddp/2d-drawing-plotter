@@ -1,9 +1,5 @@
-# Architecture and parser boundary
+# Application overview
 
-GNU LibreDWG runs as a standalone CLI and writes its usual full JSON to a local file. It is not linked into the application and contains no DrawingDocument, viewer, layer UI or PDF logic. The only parser change is Unicode JSON encoding.
+A separate GNU LibreDWG process parses the drawing. The application converts its output into a drawing model shared by display and PDF output, without an intermediate DXF conversion. Drawings, layers, text and plot settings stay on the PC. A browser connects to the local server for the interface.
 
-`bin/win64/dwgread.exe --version`
-
-`bin/win64/dwgread.exe -O JSON -o parsed.json input.dwg`
-
-The CLI works without the application or browser. Version 0.13.4 is pinned. Its published, version-specific JSON is not an internationally standardized neutral CAD format. The adapter alone translates that structure into DrawingDocument. Viewer and PDF share the resulting Scene. No DXF conversion occurs. Process separation is a technical boundary, not a final GPL legal opinion.
+GNU LibreDWG version, changes, matching source and build information are provided in the third-party notices and corresponding-source release archive.

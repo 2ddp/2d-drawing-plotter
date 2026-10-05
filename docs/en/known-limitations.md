@@ -19,9 +19,3 @@
 Complex linetypes, transparency, per-viewport overrides, detailed typography, nonrectangular viewports, dimension regeneration, special hatches, nonzero thickness and proxies are not fully compatible. Accepted DWG generations do not guarantee correct handling of every drawing. Unsupported features and substitutions are diagnosed.
 
 Annotations use read-only/locked flags, subject to PDF-reader behavior. Search/visible-text clipping boundaries can differ. Export stops when scene limits are reached rather than producing a partial PDF.
-
-## Priorities
-
-CAD rendering compatibility is prioritized. Heavy-drawing responsiveness is accepted when it matches or exceeds the earlier trial on the same PC, drawing, view, layers, fonts and display size. Missing graphics must not be mistaken for performance gains. This hardware comparison is not yet performed.
-
-Settings-change latency and loading/PDF-generation UI pauses remain lower priority. Future page-detail candidates include origin/X-Y offsets, centering toggle and 180-degree rotation. These candidates are not implemented.
