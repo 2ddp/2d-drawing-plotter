@@ -1,6 +1,6 @@
 # User guide
 
-2D Drawing Plotter 0.1.0 is a local Windows 11 x64 application for viewing 2D DWG drawings and exporting PDF. It does not edit drawings. Japanese is the primary language; English documentation is available, but the UI currently remains Japanese.
+2D Drawing Plotter 0.1.1 is a local Windows 11 x64 application for viewing 2D DWG drawings and exporting PDF. It does not edit drawings. Japanese is the primary language; English documentation is available, but the UI currently remains Japanese.
 
 ## Start
 
@@ -8,7 +8,7 @@ Extract the complete Windows ZIP into a writable folder and double-click START.c
 
 ## Open and navigate
 
-Use 「DWGを開く」 to open a drawing (128MB input limit, 120-second parser timeout). Select Model or Layout under 「表示するビュー」.
+Use 「DWGを開く」 or drop one DWG file onto the drawing area to open a drawing (128MB input limit, 120-second parser timeout). Select Model or Layout under 「表示するビュー」.
 
 The toolbar at the right center switches selection/pan modes, zoom and fit. Middle-button drag pans; the wheel zooms, including while choosing a print window. In selection mode, click or right-button drag selects entities. A rectangle dragged right uses full containment; a rectangle dragged left uses crossing selection. Shift adds and Esc clears. Visible entities inside viewports are included. Text selection uses bounds.
 
@@ -48,4 +48,18 @@ Open parsed JSON accepts LibreDWG 0.13.4 full JSON. Save parsed JSON exports the
 
 ## Troubleshooting
 
+Diagnostics group identical causes into one row. Warning and information counts refer to distinct causes; the total diagnosis count is shown separately. Expand an entity count to inspect every affected ID. Exported DrawingDocument JSON keeps the individual diagnoses.
+
 For a missing Python runtime, follow README.html. For missing or altered files, extract a fresh distribution into a new folder rather than mixing versions. For parse failures, check DWG generation, input size and timeout. For display/export differences, inspect 「診断」. Export is stopped if the scene limit is exceeded.
+
+Extrusion thickness that does not affect the 2D outline is reported as information. Thickness that changes the outline after a tilted block transform remains a warning. This classification uses thickness and direction retained when reading the DWG.
+
+Open constant-width polylines containing straight segments and circular arcs render and export as filled vector dash outlines. Approximate curve joins are identified in diagnostics. MTEXT underline, overline and strikethrough are shared vector rules for screen and PDF.
+
+Legacy curve-fit/spline-fit polylines use their stored drawing vertices. Spline control frames are excluded from linework and snapping. Reopen the original DWG to refresh older exported model JSON that lacks vertex-role metadata.
+
+WIPEOUT masks cover underlying geometry using the screen background color and white in PDF. Stored draw order and frame display/plot settings are respected. Display-only frames are excluded from PDF. Mask layers follow the visibility and printing controls.
+
+MTEXT tracking (0.75–4 times the normal spacing) adjusts glyph positions, wrapping, stacked rows and decorations. Tracking changes spacing independently of glyph width. Unsupported formatting is identified in diagnostics.
+
+MTEXT inline ACI and RGB colors are shared by screen and PDF. ACI colors participate in per-color pen settings.

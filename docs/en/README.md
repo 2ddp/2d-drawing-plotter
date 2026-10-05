@@ -8,7 +8,7 @@ A Windows tool for viewing 2D DWG drawings and creating PDF output locally. [日
 
 [Download the latest release](https://github.com/2ddp/2d-drawing-plotter/releases/latest)
 
-Extract `2D-Drawing-Plotter-0.1.0-Windows-x64.zip` and run `START.cmd`.
+Extract `2D-Drawing-Plotter-0.1.1-Windows-x64.zip` and run `START.cmd`.
 
 Requires Windows 11 x64 and desktop Edge, Chrome or Firefox. No installation, administrator privileges or separate Python installation are required. All features work offline; no internet connection is required. Free for personal, internal and commercial use. Keep the console open while using the application; close the browser tab and console to exit.
 
@@ -30,7 +30,7 @@ Drawings are processed on your PC and are not uploaded to external servers. No a
 
 ## Licensing
 
-The application is free to use; maintained application source is not published. Third-party components retain their respective licenses. Matching GNU LibreDWG source and build information accompany each release as `LibreDWG-source-for-2D-Drawing-Plotter-0.1.0.zip`. ZIP hashes are in `SHA256SUMS.txt`.
+The application is free to use; maintained application source is not published. Third-party components retain their respective licenses. Matching GNU LibreDWG source and build information accompany each release as `LibreDWG-source-for-2D-Drawing-Plotter-0.1.1.zip`. ZIP hashes are in `SHA256SUMS.txt`.
 
 [Terms](../../LICENSE.txt) · [Third-party notices](../../THIRD_PARTY_NOTICES.md) · [Distribution files](distribution.md)
 
