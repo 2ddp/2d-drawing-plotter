@@ -10,7 +10,7 @@ A Windows tool for viewing 2D DWG drawings and creating PDF output locally. [日
 
 Extract `2D-Drawing-Plotter-0.1.0-Windows-x64.zip` and run `START.cmd`.
 
-Requires Windows 11 x64 and desktop Edge, Chrome or Firefox. No installation, administrator privileges or separate Python installation are required. Normal use works offline. Free for personal, internal and commercial use. Keep the console open while using the application; close the browser tab and console to exit.
+Requires Windows 11 x64 and desktop Edge, Chrome or Firefox. No installation, administrator privileges or separate Python installation are required. All features work offline; no internet connection is required. Free for personal, internal and commercial use. Keep the console open while using the application; close the browser tab and console to exit.
 
 ## Features
 
@@ -24,7 +24,7 @@ Requires Windows 11 x64 and desktop Edge, Chrome or Firefox. No installation, ad
 
 ## Privacy
 
-Drawings are processed on your PC and are not uploaded to external servers. No account, ads, tracking or telemetry. Programs and fallback fonts required for normal use are bundled.
+Drawings are processed on your PC and are not uploaded to external servers. No account, ads, tracking or telemetry. Required programs and fallback fonts are bundled; all features work offline.
 
 [Privacy](../../PRIVACY.md) · [Network and storage](privacy-and-network.md)
 
