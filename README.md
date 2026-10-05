@@ -8,7 +8,7 @@ Windows向けの2D DWGビューアー・PDF出力ツールです。図面の確�
 
 [最新版をダウンロード](https://github.com/2ddp/2d-drawing-plotter/releases/latest)
 
-`2D-Drawing-Plotter-0.1.0-Windows-x64.zip` を展開し、`START.cmd` を実行してください。
+`2D-Drawing-Plotter-0.1.1-Windows-x64.zip` を展開し、`START.cmd` を実行してください。
 
 | 動作環境 | Windows 11 x64 |
 |---|---|
@@ -39,7 +39,7 @@ Windows向けの2D DWGビューアー・PDF出力ツールです。図面の確�
 
 本体は無償で利用できます。本体ソースコードは公開していません。利用条件および同梱コンポーネントのライセンスは、以下をご確認ください。
 
-GNU LibreDWGの対応ソースとビルド情報は、各リリースの `LibreDWG-source-for-2D-Drawing-Plotter-0.1.0.zip` で提供します。配布ZIPのSHA-256は `SHA256SUMS.txt` に記載しています。
+GNU LibreDWGの対応ソースとビルド情報は、各リリースの `LibreDWG-source-for-2D-Drawing-Plotter-0.1.1.zip` で提供します。配布ZIPのSHA-256は `SHA256SUMS.txt` に記載しています。
 
 [利用条件](LICENSE.txt) · [第三者ライセンス](THIRD_PARTY_NOTICES.md) · [配布ファイルの説明](docs/ja/distribution.md)
 
