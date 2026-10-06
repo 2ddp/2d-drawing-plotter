@@ -1,6 +1,6 @@
 # User guide
 
-2D Drawing Plotter 0.1.1 is a local Windows 11 x64 application for viewing 2D DWG drawings and exporting PDF. It does not edit drawings. Japanese is the primary language; English documentation is available, but the UI currently remains Japanese.
+2D Drawing Plotter 0.1.2 is a local Windows 11 x64 application for viewing 2D DWG drawings and exporting PDF. It does not edit drawings. Japanese is the default UI language. Select English in the Language menu at the top right to switch without reopening the drawing or resetting plot settings. Only the language preference is saved in profile/preferences.json inside the application folder and restored at the next launch. If the folder is read-only, the language applies to the current session only. Drawing text and layer names are not translated.
 
 ## Start
 
@@ -8,7 +8,7 @@ Extract the complete Windows ZIP into a writable folder and double-click START.c
 
 ## Open and navigate
 
-Use 「DWGを開く」 or drop one DWG file onto the drawing area to open a drawing (128MB input limit, 120-second parser timeout). Select Model or Layout under 「表示するビュー」.
+Use **Open DWG** or drop one DWG file onto the drawing area to open a drawing (128MB input limit, 120-second parser timeout). Select Model or Layout under **View**.
 
 The toolbar at the right center switches selection/pan modes, zoom and fit. Middle-button drag pans; the wheel zooms, including while choosing a print window. In selection mode, click or right-button drag selects entities. A rectangle dragged right uses full containment; a rectangle dragged left uses crossing selection. Shift adds and Esc clears. Visible entities inside viewports are included. Text selection uses bounds.
 
@@ -22,7 +22,7 @@ The layer list independently controls visibility and printing and highlights sel
 - Choose fit-to-paper or 1:n. Fit shows a calculated, disabled denominator. A clipping warning appears near scale only when content exceeds the page.
 - Drawing/layout units are used automatically. Unspecified units assume mm with a diagnostic. Use manual unit correction only if needed.
 
-Use 「PDFを保存」 to save directly. There is no PDF preview feature.
+Use **Save PDF** to save directly. There is no PDF preview feature.
 
 ## Pens, colors and CTB
 
@@ -34,7 +34,7 @@ Screening mixes with white; it is not opacity. CTB color, lineweight, screening 
 
 ## Fonts and search
 
-Load authorized SHX through 「SHXフォント」 for vector stroke text. Fonts are never downloaded automatically. Noto Sans JP is the bundled fallback; missing/unsupported glyph substitutions are diagnosed.
+Load authorized SHX through **SHX fonts** for vector stroke text. Fonts are never downloaded automatically. Noto Sans JP is the bundled fallback; missing/unsupported glyph substitutions are diagnosed.
 
 Horizontal SHAPES 1.0/1.1, UNIFONT 1.0 and BIGFONT 1.0 are supported. BIGFONT assumes Shift-JIS. Vertical text, special variants and universal font compatibility are not implemented. Limits are 16MB per file, 64MB total and 64 fonts. Fonts remain in the tab's memory and are not included in settings JSON.
 
@@ -50,7 +50,7 @@ Open parsed JSON accepts LibreDWG 0.13.4 full JSON. Save parsed JSON exports the
 
 Diagnostics group identical causes into one row. Warning and information counts refer to distinct causes; the total diagnosis count is shown separately. Expand an entity count to inspect every affected ID. Exported DrawingDocument JSON keeps the individual diagnoses.
 
-For a missing Python runtime, follow README.html. For missing or altered files, extract a fresh distribution into a new folder rather than mixing versions. For parse failures, check DWG generation, input size and timeout. For display/export differences, inspect 「診断」. Export is stopped if the scene limit is exceeded.
+For a missing Python runtime, follow README.html. For missing or altered files, extract a fresh distribution into a new folder rather than mixing versions. For parse failures, check DWG generation, input size and timeout. For display/export differences, inspect **Diagnostics**. Export is stopped if the scene limit is exceeded.
 
 Extrusion thickness that does not affect the 2D outline is reported as information. Thickness that changes the outline after a tilted block transform remains a warning. This classification uses thickness and direction retained when reading the DWG.
 

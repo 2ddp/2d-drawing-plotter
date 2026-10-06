@@ -5,3 +5,5 @@ Drawing parsing, display and PDF generation run on your PC. Required programs, l
 The browser communicates with the application over a local 127.0.0.1 connection. Browser and OS synchronization or updates follow their own settings.
 
 Parser temporary files are normally removed; forced termination can leave them behind. PDFs, settings and parsed JSON are saved on user request. The input DWG is not modified. The user-initiated eyedropper obtains screen colors locally without uploading screen images.
+
+Changing the UI language saves only its code in profile/preferences.json inside the application folder. This file contains no drawing data, plot settings or personal information.

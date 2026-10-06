@@ -1,0 +1,54 @@
+{
+  "files_sha256": {
+    "CHANGELOG.md": "9ffe66b5aec8d8aa717ea649259404ee4068a725093110c0ea1a7ad48e4c77d2",
+    "CONTRIBUTING.md": "4ba98e91ff8c22e6c71d5ce944380625214e5feda28f1a06e840b172b5bd7c7e",
+    "LICENSE.txt": "00f891b2d6b4995d7e37325fa033210d2fd519247b75532600b8db2a5d768f37",
+    "PRIVACY.md": "55b8ef9ef79d34608ecfdf1b2076dfc9ba33ad045367a2a0d7b05a1c632cca48",
+    "README.md": "8b9462964c0ad8d0550b6a7d37ee6f4b635f3b94781b294db7788839c4f77113",
+    "SECURITY.md": "5c72f46ebb47f5c2a7aa5e1157e84aeda13d266656e34a1151dd578b2c8baa6c",
+    "THIRD_PARTY_NOTICES.md": "05fbdff50797f9ba184ce0fc0231c29fc6d8c7ed44b6a30d07f8819f53f34222",
+    "docs/en/README.md": "953aeba156a0d1e01b700dbbd2513fe7f9806339ae16068140fc15322a23f726",
+    "docs/en/architecture.md": "9d56b2ddf1c2735229f4eff3b0b591bef08997a08fb5ea292cccd6fdc3c4a7f6",
+    "docs/en/distribution.md": "9fc0cb366a2d4c0b214a063f324fb1feb15b44345a9a3eedb565f15254c05c70",
+    "docs/en/known-limitations.md": "8b073d056ba84ebe89f9f2e0d3e8be719747bbbd867160d09e3d74452955b546",
+    "docs/en/privacy-and-network.md": "dc825608f42754d0eca0044a9b88cc969db121cb5db9ba875ee9c7cebe728386",
+    "docs/en/status.md": "ea742fda3500b014baf8c5a3b9ad2f458ac5c6b8c64b336647107101252dd7ac",
+    "docs/en/supported-dwg.md": "0baf5cbdf128dbc169ebcbfaa3aa6e79e4344a82c91ac629f2747beccad1f8d7",
+    "docs/en/user-guide.md": "bf4309322b48cd3711047b0797098839e4df434fb5a67f7ee904976a4bfdc5ad",
+    "docs/ja/architecture.md": "c31d31adad0f1d48040f08e4ac3d3932cd5a7d7bfacffac3e112319342985565",
+    "docs/ja/distribution.md": "b599cfe411fb5cde68ece8e31354c8e606a45fefb49dbb3290ca430c5ba912cc",
+    "docs/ja/known-limitations.md": "e582e67c74cb3d4dd336b25b16dc9fbca171439afeffd72d05afcf4be7bf0500",
+    "docs/ja/privacy-and-network.md": "c43407db75820b5510bdd34e9a7b0eeb42fa4dbd5f3817ec9a9031474619a97e",
+    "docs/ja/status.md": "1efc7787fe68a8da21e61fd66647da67ba2418025dd38d984be2190a4aa29574",
+    "docs/ja/supported-dwg.md": "fd668ae7a18bd7d98eff1be46cb91ab14e2bcabf3a1be3a8d87f7f62bcdc1282",
+    "docs/ja/user-guide.md": "f9a5b8a1e6e43b9840584490ca6ef71c60e7483ca697746d6835adad1a1de7b1",
+    "third-party-source/LibreDWG/README.md": "7fb8251fa0817628b7e588ca966cfdcb56c51aa8f3a7988cb6db3ae56ae7b6c7"
+  },
+  "history_included": false,
+  "package_kind": "public-documentation",
+  "product": {
+    "channel": "release",
+    "documentation_languages": [
+      "ja",
+      "en"
+    ],
+    "engine_path": "libredwg-native-drawing-document",
+    "model_schema": 1,
+    "parser_profile": "gnu-libredwg-0.13.4-full-json",
+    "pdf": "independent-scene-pdf-lib",
+    "primary_language": "ja",
+    "product": "2D Drawing Plotter",
+    "repository": "https://github.com/2ddp/2d-drawing-plotter",
+    "slug": "2d-drawing-plotter",
+    "source_public": false,
+    "standalone": true,
+    "tagline": "Lightweight DWG Viewer & PDF Plot Tool",
+    "ui_languages": [
+      "ja",
+      "en"
+    ],
+    "version": "0.1.2",
+    "viewer": "independent-canvas",
+    "windows_parser": "GNU LibreDWG 0.13.4 (Unicode JSON patch)"
+  }
+}

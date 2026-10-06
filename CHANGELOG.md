@@ -1,5 +1,11 @@
 # 更新履歴 / Changelog
 
+## 0.1.2
+
+- 日本語／EnglishのUI切替を追加。図面と印刷設定を維持し、選択した言語を次回起動へ引き継ぎます。
+- 用紙・尺度・画層・ペン・スポイト・フォント管理・診断の英語表示に対応。
+- Added Japanese/English UI switching, including plot controls, layers, pens, color picking, fonts and diagnostics.
+
 ## 0.1.1 — 2026-10-06
 
 - DWGの表示互換性と描画パフォーマンスを改善しました。
