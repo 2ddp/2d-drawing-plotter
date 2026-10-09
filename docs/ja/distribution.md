@@ -2,9 +2,9 @@
 
 | ファイル | 内容 |
 |---|---|
-| 2D-Drawing-Plotter-0.1.2-Windows-x64.zip | 通常利用用。全体を展開しSTART.cmdで起動します |
-| LibreDWG-source-for-2D-Drawing-Plotter-0.1.2.zip | 同梱GNU LibreDWGの対応ソース、変更パッチ、ビルド手順 |
-| 2D-Drawing-Plotter-0.1.2-Public-Repository.zip | 説明書と公開資料 |
+| 2D-Drawing-Plotter-0.1.3-Windows-x64.zip | 通常利用用。全体を展開しSTART.cmdで起動します |
+| LibreDWG-source-for-2D-Drawing-Plotter-0.1.3.zip | 同梱GNU LibreDWGの対応ソース、変更パッチ、ビルド手順 |
+| 2D-Drawing-Plotter-0.1.3-Public-Repository.zip | 説明書と公開資料 |
 | SHA256SUMS.txt | 公開ZIPのSHA-256 |
 
 GitHubが自動生成する「Source code」は公開資料のアーカイブです。アプリ本体のソースコードは含みません。

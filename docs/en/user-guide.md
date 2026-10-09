@@ -1,6 +1,6 @@
 # User guide
 
-2D Drawing Plotter 0.1.2 is a local Windows 11 x64 application for viewing 2D DWG drawings and exporting PDF. It does not edit drawings. Japanese is the default UI language. Select English in the Language menu at the top right to switch without reopening the drawing or resetting plot settings. Only the language preference is saved in profile/preferences.json inside the application folder and restored at the next launch. If the folder is read-only, the language applies to the current session only. Drawing text and layer names are not translated.
+2D Drawing Plotter 0.1.3 is a local Windows 11 x64 application for viewing 2D DWG drawings and exporting PDF. It does not edit drawings. Japanese is the default UI language. Select English in the Language menu at the top right to switch without reopening the drawing or resetting plot settings. Only the language preference is saved in profile/preferences.json inside the application folder and restored at the next launch. If the folder is read-only, the language applies to the current session only. Drawing text and layer names are not translated.
 
 ## Start
 
@@ -8,7 +8,7 @@ Extract the complete Windows ZIP into a writable folder and double-click START.c
 
 ## Open and navigate
 
-Use **Open DWG** or drop one DWG file onto the drawing area to open a drawing (128MB input limit, 120-second parser timeout). Select Model or Layout under **View**.
+Use **Open DWG** or drop one DWG file onto the drawing area to open a drawing (128MB input limit, 120-second parser timeout). Select Model or Layout under **Model / layout**.
 
 The toolbar at the right center switches selection/pan modes, zoom and fit. Middle-button drag pans; the wheel zooms, including while choosing a print window. In selection mode, click or right-button drag selects entities. A rectangle dragged right uses full containment; a rectangle dragged left uses crossing selection. Shift adds and Esc clears. Visible entities inside viewports are included. Text selection uses bounds.
 
@@ -17,7 +17,7 @@ The layer list independently controls visibility and printing and highlights sel
 ## PDF export
 
 - Choose A0–A4 or a custom paper size and orientation. Preset width/height are calculated and disabled.
-- Choose printable extents, current display, or a two-point window. Toggle snapping with its checkbox or Alt.
+- **Extents** plots all objects enabled for printing in the selected model or layout; **Display** uses the area currently shown on screen; **Window** uses a rectangle specified by two opposite corners. Each option has an explanation below it. Toggle snapping with its checkbox or Alt.
 - Margin is under page details and defaults to 0mm. Output is centered.
 - Choose fit-to-paper or 1:n. Fit shows a calculated, disabled denominator. A clipping warning appears near scale only when content exceeds the page.
 - Drawing/layout units are used automatically. Unspecified units assume mm with a diagnostic. Use manual unit correction only if needed.
@@ -25,6 +25,8 @@ The layer list independently controls visibility and printing and highlights sel
 Use **Save PDF** to save directly. There is no PDF preview feature.
 
 ## Pens, colors and CTB
+
+**Base lineweight** keeps the same field name in both lineweight modes. Drawing / color uses it when no lineweight is set in the drawing, CTB or color settings. Uniform applies it to all geometry. The explanatory text updates when the mode changes.
 
 Output color is black (default), drawing colors, or per-color settings. The collapsed CTB/per-color section inside color/lineweight imports CTB and edits the used ACI colors, widths and screening. Row numbers are display order, not new ACI values. TrueColor does not use ACI pens.
 
@@ -63,3 +65,7 @@ WIPEOUT masks cover underlying geometry using the screen background color and wh
 MTEXT tracking (0.75–4 times the normal spacing) adjusts glyph positions, wrapping, stacked rows and decorations. Tracking changes spacing independently of glyph width. Unsupported formatting is identified in diagnostics.
 
 MTEXT inline ACI and RGB colors are shared by screen and PDF. ACI colors participate in per-color pen settings.
+
+Nonrectangular viewports support closed polylines with arc segments, circles, ellipses and closed splines. Viewing and PDF export use the same vector boundary. Selection and snapping share curve interaction data with bounded accuracy and subdivision. Circle and ellipse frames provide center and quadrant snaps; bulged polylines provide actual endpoints, arc midpoints and other semantic snaps, not artificial subdivision points. Region boundaries, open or self-intersecting boundaries, discontinuities and subdivision limits are reported in diagnostics.
+
+Complex linetypes with embedded text and SHX shapes are supported on lines, circles, circular arcs, ellipses, splines and zero-width polylines with straight or arc segments. Viewing and PDF use the same vector curves, and embedded text remains searchable and copyable. Ellipse distances are measured along the physical axes, keeping symbol size independent of the axis ratio. Discontinuous spline spans restart the pattern without connecting strokes. Load required SHX files using the SHX controls. Missing shapes leave the dash pattern intact; missing text fonts use the bundled fallback, with the reason shown in diagnostics. Wide polylines, changing-elevation curves, reversals without a unique tangent and unsupported rotation modes have diagnosed fallback rendering.
