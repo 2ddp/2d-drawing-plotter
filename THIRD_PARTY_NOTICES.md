@@ -15,6 +15,7 @@
 | libffi | 3.4.4 (CPython pinned build recipe) | Anthony Green, Red Hat and others | MIT, runtime/LICENSE.txt | Windows ctypes pixel APIs | No |
 | SQLite | 3.50.4.0 (CPython pinned build recipe) | SQLite authors | Upstream public-domain dedication | Included in unmodified standard Python runtime | No |
 | zlib | 1.3.1 (CPython pinned build recipe) | Jean-loup Gailly, Mark Adler | zlib license | CTB and standard Python compression | No |
+| Unicode Bidi class / mirroring facts | 15.0.0 | Unicode, Inc.; original notice retained in licenses/unicode/LICENSE.txt | Unicode-3.0 | Bounded implicit text direction; generated from CPython unicodedata | Yes: range encoding |
 | Windows UCRT / Win32 | OS-provided | Microsoft | OS component terms | C runtime and screen-pixel APIs | No: not separately bundled |
 
 ## Project URLs
@@ -43,3 +44,5 @@ pdf-lib/fontkitに内包された部品の原通知とApache-2.0本文をlicense
 esbuild 0.25.12 (MIT, Evan Wallace 2020; https://github.com/evanw/esbuild)は非公開ビルドでのみ使用します。フォント正規化はfonttools 4.61.1を使用した既存の固定成果物を保持します。開発工具・合成テスト図面は実行版へ入れません。
 
 English: Original component terms and copyright notices govern each dependency. Application terms do not override them. LibreDWG's complete matching source, Unicode patch and build recipe are provided separately with equivalent access. Python is the unmodified official embeddable package, retaining original notices and containing no added pip packages. PDF bundles retain embedded component notices. No commercial SHX or private drawings are bundled. Build tooling is private and not part of the runtime.
+
+Unicode data generation is recorded in tools/generate_bidi_data.py in the private source package. The runtime does not load remote Unicode data. FriBidi is used only to generate a development reference corpus and is not shipped or called by the application.

@@ -1,5 +1,55 @@
 # 更新履歴 / Changelog
 
+## 0.1.4
+
+### 日本語
+
+#### 幅付きポリラインと線種
+
+- 一定幅・可変幅の開閉ポリラインで、通常の破線、ゼロ長の点、文字・SHX記号入り線種の対応範囲を拡張しました。直線・円弧、継ぎ目、先細り、幅の段差、点から始まる線種と、変換後の文字・記号の正立方向を扱います。
+- PSLTSCALEを読み、設定が1の場合はビューポート倍率が違っても紙上の線種尺度を揃えます。画面・ベクトルPDF・画層・クリップ・選択・スナップで描画データを共有します。
+
+#### MTEXTの書式・段落・双方向文字
+
+- MTEXTの部分SHX／TrueTypeフォント、固定TTF／OTFの読込み、左右余白・字下げ、左／中央／右・両端／均等配置、左／中央／右タブ、最小／固定行間に対応範囲を追加しました。測定・折返し・画面・PDFが同じ文字配置を使います。
+- 結合文字を改行やフォント代替で分断しないよう改善しました。基本的なアラビア語・ヘブライ語の双方向配置と、方向記号・埋め込み・上書き・分離に対応し、元の文字列を検索用PDFへ保持します。
+- 同じ書体のアラビア文字・結合記号だけの単語では、確認できた字形の所属に基づき、部分色・装飾・幅・傾き・高さ・上下位置を適用して単語全体の字形を維持します。完全なUAX #9準拠や全言語・全書式への対応は意味しません。
+
+#### マルチ引出線の表示とプレビュー
+
+- 平面・横書き・単一段組みの文字背景で、図面背景色、保存ACI／RGB色、明示アルファによる透過をプレビュー表示します。保存値に基づく文字枠と、左右5／6・上下10の文字接続の下線／上線も追加しました。背景・枠・接続線・文字の色と透過を分離します。
+- 非表示・空の枝だけの場合に孤立した接続線を残さず、上下接続に横向きのdoglegを加えません。枝の表示上書き、共有接続線、保存された最小／固定行間を反映し、保存座標・間隔の二重尺度化を防ぎます。
+- 元CADとの外観比較は未完了のため、背景・枠・接続装飾線のプレビュー警告を維持します。全行接続形式8、曲線／線切断、複雑な接続線種、段組み・縦書き・傾斜平面、旧矢印・属性上書きなどの未対応条件は診断します。
+
+#### 空白レイアウトの診断と確認範囲
+
+- 保存ビューポートがモデルの表示範囲外にある空白と、画層・凍結・クリップ等による空表示を区別して通知します。保存カメラや図形は自動変更しません。
+- dev26までに通常版／minify版JavaScript各1,076件、Python44件、元の2図面の回帰確認と専用サンプルのCanvas／ベクトルPDFを確認しています。Windows実機・元CADとの外観／枠／透過／CTB比較、フィット点のみのスプライン、代替フォント、予約線幅の照合は継続課題です。
+
+### English
+
+#### Wide polylines and linetypes
+
+- Extended simple and text/SHX complex linetypes on supported open/closed constant- and variable-width polylines, including line/arc segments, seams, tapering, width steps, zero-length dots, dot-first patterns and upright symbols after transforms.
+- Read PSLTSCALE and keep paper-space linetype size consistent across viewport scales when enabled. Share resolved geometry across Canvas, vector PDF, layers, clipping, selection and snapping.
+
+#### MTEXT formatting, paragraphs and bidirectional text
+
+- Extended inline SHX/TrueType fonts and fixed TTF/OTF loading, paragraph margins/indents, left/center/right/justified/distributed alignment, left/center/right tabs and at-least/exact line spacing. Measurement, wrapping, Canvas and PDF share text layout.
+- Protect combining clusters during wrapping and fallback. Support basic Arabic/Hebrew bidirectional layout and directional marks, embeddings, overrides and isolates, preserving original text in searchable PDF output.
+- For same-font Arabic-letter/mark-only words, apply inline paint, rules, width, oblique, height and vertical alignment through verified glyph ownership while retaining whole-word shaping. Full UAX #9 or unrestricted script/format support is not claimed.
+
+#### Multileader rendering and previews
+
+- Preview drawing-background/ACI/RGB fills and explicit-alpha transparency on planar horizontal single-column text. Add stored text frames and attachment rules for horizontal types 5/6 and vertical type 10, keeping background, frame, rule and text paint separate.
+- Avoid detached doglegs for hidden-only/empty branches and horizontal doglegs for vertical attachments. Respect branch visibility overrides, shared connections and stored line spacing without rescaling stored coordinates/gaps twice.
+- Keep preview diagnostics because original CAD appearance is unverified. Diagnose unsupported all-line type 8, curved/broken connections, complex attachment linetypes, columns, vertical/tilted text and remaining legacy arrow/attribute overrides.
+
+#### Empty-layout diagnostics and verification scope
+
+- Distinguish saved viewports outside model geometry from empty results caused by visibility, freezing or clipping. Keep stored cameras and geometry unchanged.
+- Through dev26, verified 1,076 JavaScript tests on both source and minified builds, 44 Python tests, two original-drawing regressions and authored Canvas/vector-PDF samples. Windows/original CAD appearance/frame/alpha/CTB acceptance, fit-only spline comparison, fallback fonts and reserved lineweights remain pending.
+
 ## 0.1.3
 
 ### 日本語
